@@ -8,7 +8,7 @@ class AphroditeHook(idaapi.Hexrays_Hooks):
     def __init__(self, *args):
         idaapi.Hexrays_Hooks.__init__(self, *args)
         self.log_tag = "AphroditeHook"
-        self.DEBUG = 1
+        self.DEBUG = 0
         self.collapsed_table = {}
         self.origin_code = {}
     
