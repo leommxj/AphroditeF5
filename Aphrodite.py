@@ -51,6 +51,9 @@ class AphroditeHook(idaapi.Hexrays_Hooks):
                 continue
             if cur_offset <= offset:
                 return i
+        # it is the root block of whole function
+        # just return the function's end line decrease 1
+        return len(ocode) - 1
 
     def abs_lnnum(self, line0, lnnum):
         self.log('get abs_lnnum @ {}'.format(lnnum))
